@@ -40,16 +40,25 @@ Function complement(input_str As String, Optional ByVal isRNA = 0)
     ' calculate the complement of a DNA/RNA sequence
     If isRNA = 1 Then
         input_str = swap_letters(input_str, "A", "U")
+        input_str = swap_letters(input_str, "a", "u")
     Else
         input_str = swap_letters(input_str, "A", "T")
+        input_str = swap_letters(input_str, "a", "t")
     End If
     input_str = swap_letters(input_str, "C", "G")
+    input_str = swap_letters(input_str, "c", "g")
     
     'now deal with the ambiguous codes
     input_str = swap_letters(input_str, "R", "Y")
     input_str = swap_letters(input_str, "K", "M")
     input_str = swap_letters(input_str, "B", "V")
     input_str = swap_letters(input_str, "D", "H")
+    input_str = swap_letters(input_str, "r", "y")
+    input_str = swap_letters(input_str, "k", "m")
+    input_str = swap_letters(input_str, "b", "v")
+    input_str = swap_letters(input_str, "d", "h")
+    input_str = swap_letters(input_str, "N", "N")
+    input_str = swap_letters(input_str, "n", "n")
 
     complement = input_str
 
